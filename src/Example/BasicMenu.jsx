@@ -2,6 +2,7 @@ import React from 'react';
 import { Button } from '../Components/Button/Button';
 import { Menu } from '../Components/Menu/Menu';
 import { MenuItem } from '../Components/Menu/MenuItem';
+import "./example.css"
 
 export const BasicMenu = () => {
   const [anchorEl, setAnchorEl] = React.useState(null);
@@ -23,6 +24,7 @@ export const BasicMenu = () => {
         aria-haspopup="true"
         aria-expanded={open ? 'true' : undefined}
         onClick={handleClick}
+        className="naresh"
       >
         Dashboard
       </Button>

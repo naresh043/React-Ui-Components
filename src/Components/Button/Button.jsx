@@ -1,12 +1,12 @@
 import React from 'react';
+import { twMerge } from 'tailwind-merge';
+import clsx from 'clsx';
 import './Button.css';
 
 export const Button = React.forwardRef(({
   children,
   id,
-  'aria-controls': ariaControls,
-  'aria-haspopup': ariaHasPopup,
-  'aria-expanded': ariaExpanded,
+  className,
   onClick,
   ...props
 }, ref) => {
@@ -14,11 +14,8 @@ export const Button = React.forwardRef(({
     <button
       ref={ref}
       id={id}
-      aria-controls={ariaControls}
-      aria-haspopup={ariaHasPopup}
-      aria-expanded={ariaExpanded}
       onClick={onClick}
-      className="button"
+      className={twMerge(clsx('button', className))}
       {...props}
     >
       {children}
