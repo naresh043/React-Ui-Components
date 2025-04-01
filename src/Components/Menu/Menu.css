@@ -1,4 +1,4 @@
-.menu-container {
+/* .menu-container {
     z-index: 1300;
     position: fixed;
   }
@@ -28,4 +28,59 @@
   
   .menu-item:hover {
     background-color: rgba(0, 0, 0, 0.04);
-  }
+  } */
+
+/* 
+.menu-container {
+  z-index: 1300;
+  position: fixed;
+  overflow-y: auto;
+  border: 10px solid red;
+  -webkit-overflow-scrolling: touch; 
+}
+
+.menu-list {
+  list-style: none;
+  margin: 0;
+  padding: 8px 0;
+  min-width: 112px;
+  max-width: 280px;
+  background-color: #fff;
+  border-radius: 4px;
+  box-shadow: 0px 5px 5px -3px rgba(0,0,0,0.2), 
+              0px 8px 10px 1px rgba(0,0,0,0.14), 
+              0px 3px 14px 2px rgba(0,0,0,0.12);
+  outline: 0; 
+  max-height: inherit;
+  overflow-y: auto;
+} */
+
+/* Menu.css */
+.menu-container {
+  z-index: 1300;
+  position: fixed;
+  /* Remove overflow-y from container */
+}
+
+.menu-list {
+  list-style: none;
+  margin: 0;
+  padding: 8px 0;
+  min-width: 112px;
+  max-width: 280px;
+  background-color: #fff;
+  border-radius: 4px;
+  box-shadow: 0px 5px 5px -3px rgba(0,0,0,0.2), 
+              0px 8px 10px 1px rgba(0,0,0,0.14), 
+              0px 3px 14px 2px rgba(0,0,0,0.12);
+  outline: 0;
+  /* Move all scroll-related properties here */
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  /* Prevent content width changes */
+  width: max-content;
+  min-width: 100%;
+  box-sizing: border-box;
+  /* Smooth transitions */
+  transition: max-height 0.2s ease-out;
+}
