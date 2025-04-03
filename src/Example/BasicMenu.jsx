@@ -70,6 +70,7 @@ export const BasicMenu = () => {
       </Button>
       <Menu
         id="basic-menu"
+        className="custom-menu"
         anchorEl={anchorEl}
         open={open}
         onClose={handleClose}

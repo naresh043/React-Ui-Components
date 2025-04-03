@@ -151,6 +151,7 @@ import { useEffect, useRef, useState } from "react";
 
 export const Menu = ({
   id,
+  className,
   anchorEl,
   open,
   onClose,
@@ -231,8 +232,10 @@ export const Menu = ({
     <div
       ref={menuRef}
       id={id}
-      className={twMerge(clsx("menu-container", open && "block"))}
+      // className={twMerge(clsx("menu-container", open && "block"))}
+      className={twMerge(clsx("menu-container", className, open && "block"))} 
       style={style}
+      // style={{border:'2px solid red'}}
       role="presentation"
     >
       <ul
